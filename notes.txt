@@ -1,0 +1,29 @@
+Bottleneck calculations and analysis
+
+A collection of simple calculations to illustrate quantities and distributions related to the mtDNA bottleneck. C for calculations, Bash for compilation and running, Gnuplot for visualisation. Entire manifest should run in under 5 minutes on a modern computer.
+
+./del-analysis.sh -- Bash script to delete results of previous compiles and analyses
+./run-analysis.sh -- Bash script to compile and run analyses
+
+FIG 3C === 
+simulate-beta.c -- produces data for Fig 3C (different model heteroplasmy distributions) -> simulate-beta.txt
+simulate-kimura.c -- produces data for Fig 3C -> simulate-kimura.txt
+simulate-binomial.c -- produces data for Fig 3C -> simulate-binomial.txt
+plot-distributions.sh -- Gnuplot script, plots the above
+
+FIG 4A === 
+sampling-scheme.c -- produces data for Fig 4A (issues with MSD-based bottleneck inference) -> sampling-scheme.txt
+plot-sampling-scheme.sh -- Gnuplot script, plots the above
+
+FIG 4B === 
+bneck-errors.c -- produces data for Fig 4B (errors in bottleneck size estimates) -> bneck-errors.txt
+plot-bneck-errors.sh -- Gnuplot script, plots the above
+
+FIG 5A === 
+plot-ngv-1.sh -- Gnuplot script, uses simulate-kimura.txt for illustration and produces Fig 5A (N, g, V relationship)
+
+FIG 5B === 
+simulate-wright.c -- produces data for Fig 5B (N, g, b, V relationship) -> simulate-wright.txt
+plot-simulate-wright.sh -- Gnuplot script, plots the above with the exp(-g/N) approximation to (1 - 1/N)^g
+
+
